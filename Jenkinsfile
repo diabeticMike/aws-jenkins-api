@@ -7,12 +7,12 @@ pipeline {
         GO111MODULE = 'on'
     }
     stages {
-	stage('Setting up dependencies'){
-		steps {
-			echo 'Setting up dependencies'
-			sh 'go mod vendor'
-		}
-	}
+        stage('Setting up dependencies'){
+            steps {
+                echo 'Setting up dependencies'
+                sh 'go mod vendor'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Running build automation'
