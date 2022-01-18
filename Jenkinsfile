@@ -17,6 +17,9 @@ pipeline {
             }
         }
         stage('Build') {
+            when {
+                branch 'master'
+            }
             agent {
                 label "api2"
             }
