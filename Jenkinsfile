@@ -8,11 +8,6 @@ pipeline {
     }
     stages {
         stage('Setting up dependencies'){
-            when {
-                not {
-                    branch 'master'
-                }
-            }
             agent {
                 label "api2"
             }
@@ -22,9 +17,6 @@ pipeline {
             }
         }
         stage('Build') {
-            when {
-                branch 'master'
-            }
             agent {
                 label "api2"
             }
