@@ -8,7 +8,7 @@ import (
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte(`Hello World 3`))
+		w.Write([]byte(`Hello World 4`))
 	}).Methods(http.MethodGet)
 	println("listen to 8080")
 	if err := http.ListenAndServe(":8080", router); err != nil {
